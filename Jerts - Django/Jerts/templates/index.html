@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es-cl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jerts</title>
+    <link rel="icon" type="Inicio/img_inicio/jpg" href="{% static 'Inicio/img_inicio/logo_jerts.jpeg' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/flexboxgrid.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css ">
+    <link rel="stylesheet" href=" {% static 'Inicio/css/style_index.css' %}">
+</head>
+
+<body>
+   {% include 'menu.html' %}
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags == 'success' %}alert-success{% else %} alert-danger {% endif %} ">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                    {{ message }}
+             </div>              
+        {% endfor %}
+                            
+    {% endif %}
+    <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="{% static 'Inicio/img_inicio/2.jpg' %}" class="d-block w-100" alt="...">
+                  <div class="carousel-caption  d-md-block">
+                        
+                    
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="{% static 'Inicio/img_inicio/1.jpg' %}" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-md-block">
+                       
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="{% static 'Inicio/img_inicio/3.jpg' %}" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-md-block">
+                        
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+        </div>
+    </div>
+       
+
+<div class="row main">
+    <div class="col-xs-12 col-sm-4 no-xs"></div>
+    <div class="col-xs-12 col-sm-4 no-xs"><h2 class=" centrar texto-blanco">!Conduce con cuidado!</h2></div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="row center-xs">
+        
+      </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 texto-left margin-top-xs">
+      <h3>Conoce nuestra aplicacion</h3>
+       <video controls autoplay >
+      
+        <source  src="{% static 'video/apk.mp4' %}" type="video/mp4"/>
+
+       </video> 
+      </div>
+      <br>
+      <div class="col-xs-12 col-sm-6 centrar margin-200   ">
+        <h3>Proposito</h3>
+        <p>Creamos jerts con el proposito de ayudar a nuestros usuarios a mejorar sus habilidades tras el volante y premiar
+          a los mejores usuarios que seran sometidos a diferentes desafios.</p>
+        <p>
+          jerts conciste en un juego que evalua a los usuarios registrados en nuestro sistemas, atraves 
+          de las normas de transito de chile, los conductores seran sometidos a diversas pruebas que tendran que 
+          superar para ir alcanzando los siguientes niveles y esto sera reconpenzado con descuentos para combustible y
+          se les otorgara diplomas en caso de cumplir los requisitos solicitados.
+          
+        </p>
+        <img class=rotulo2 src="{% static 'Inicio/img_inicio/gif4.gif' %}">
+        
+        
+      </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 texto-derecha margin-top-xs">
+          <h3>Aprender las reglas básicas:</h3>
+          <p>1. Colócate el cinturón de seguridad, no importa si vas solo hasta la esquina, Nunca arranques el auto sin tenerlo puesto.</p>
+          <p>2. Asegúrate de que la palanca de cambios esté en punto muerto y luego gira la llave para arrancar el auto.</p>
+          <p>3. Coloca la luz de giro hacia el lado que vas a salir, para avisar a los otros conductores que estás por entrar a la pista. Al entrar, si no se salió automáticamente tendrás que retirarla tú.</p>
+          <p>4. Mira por los espejos para verificar que no haya automóviles cerca al salir.</p>
+          <p>5. Cuando estés listo para arrancar, aprieta el freno para evitar que el auto se mueva. Presiona el embrague, coloca primera marcha y comienza a acelerar lentamente, mientras sueltas el embrague para que el auto comience a avanzar.</p>
+          <p>6. Conduce colocando las manos en el volante en posición 10 y 10, imagina que el volante es un reloj para colocar la mano izquierda donde indicaría las 10 horas y la mano derecha donde indicaría las 3.</p>
+          <p>7. Para mover el vehículo considera que según para el lado que gires el volante, para ese lugar irá el auto. Para cambiarte de carril tendrás que moverlo muy poco, para doblar en una esquina deberás hacerlo con mayor profundidad.</p>
+      </div>
+      <br>
+      <div  class="col-xs-12 col-sm-6 margin-top-xs   " >
+        <h3>Patrocinador</h3>
+        <img class=rotulo src="{% static 'inicio/img_inicio/gif1.gif' %}" alt="">
+        <h1></h1>
+        <img  class=rotulo3  src="{% static 'inicio/img_inicio/gif5.gif' %}"  alt="">
+          
+          
+
+      </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="bg-jerts-white-10" data-reactid="195"><hr data-reactid="196">
+  <div data-reactid="197">
+    <div class="layout" style="padding:0 32px 80px 32px;" data-reactid="198">
+      <div class="layout__item one-half portable-one-whole" data-reactid="199">
+        <p data-reactid="200">© 2019 Jerts Inc.</p>
+      </div>
+    <div class="layout__item one-half portable-one-whole" data-reactid="201">
+      <table style="width:100%;" data-reactid="202">
+        <tbody style="border-collapse:collapse;border:0;" data-reactid="203">
+          <tr style="border-collapse:collapse;border:0;" data-reactid="204">
+            <td style="display:table-cell;padding:0px;margin:0;background:inherit;padding-right:15px;width:25%;" data-reactid="205"><a href="#" data-reactid="206">Privacidad</a></td><td style="display:table-cell;padding:0px;margin:0;background:inherit;padding-right:15px;width:25%;" data-reactid="207"><a href="#" data-reactid="208">Términos</a></td><td style="display:table-cell;padding:0px;margin:0;background:inherit;padding-right:15px;width:50%;" class="hidden--desk-and-up" data-reactid="209">&nbsp;</td></tr></tbody></table></div></div></div></div>
+
+
+
+
+
+
+        
+   
+
+</body>
+<!--JS FILES-->
+<script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+<script src=" {% static 'js/jquery.validate.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+
+</html>

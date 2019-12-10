@@ -1,0 +1,53 @@
+  {% load static %}
+  <nav class="navbar navbar-expand-lg navbar-dark header">
+        <a class="navbar-brand" href=" {% url 'index' %}">
+            <img  class="imagen" src="{% static 'Quienes somos/img_quienes_somos/logo_jerts.jpeg' %}" alt="logo_jerts"  height="50" >
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href=" {% url 'index' %}">INICIO <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'nosotros' %}">¿QUIENES SOMOS?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contacto' %}">CONTACTO</a> 
+                </li>
+               
+              
+                  {% if user.is_authenticated %} 
+                  <li class="navbar-item">
+                      <a href="#" class="nav-link">
+                        <span class="fas fa-sign-in-alt"></span>
+                        USUARIO LOGUEADO:{{ user.username }} </a>
+                    </li>
+                    <li class="navbar-item">
+                      <a href="{% url 'salir' %}" class="nav-link">
+                        <span class="fas fa-sign-in-alt"></span>
+                        SALIR</a>
+                    </li>
+                  {% else %}
+                    <li class="navbar-item {% if request.path == login %}active{% endif %}">
+                      <a href="{% url 'ingresar' %}" class="nav-link">
+                        <span class="fas fa-user"></span>
+                        INICIA SESION</a>
+                    </li>
+
+                    <li class="navbar-item {% if request.path == registro %}active{% endif %}">
+                      <a href="{% url 'registro' %}" class="nav-link">
+                        <span class="fas fa-user-plus"></span>
+                        REGISTRATE</a>
+                    </li>
+                  {% endif %}     
+            </ul>
+            
+        </div>  
+        <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{% static 'Apk/Jerts.apk' %}">DESCARGAR APLICACION</a>      
+    </nav>

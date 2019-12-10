@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
+
+
+.main{
+    background-color:rgb(16, 10, 48);
+
+}
+.header{
+    background-color:rgb(16, 10, 48);
+}
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+}
+.centrar{
+    text-align: center;
+    
+}
+.texto-blanco{
+    color:#ffffff;
+}
+
+.btn-bd-download{
+    font-weight: 600;
+    color: #ffffff;
+    border-color:cornsilk;
+}
+
+ul{
+    list-style: none;
+    padding: 10px;
+ }
+  
+ li{
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+footer{
+    background-color: lightgray;
+    padding: 25px;
+}
+.altura{
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border: 5px;
+    border-radius: 40px;
+}
+.carousel-control-next-icon{
+    background-color: #100A30;
+    border: 5px solid #100A30;
+    border-radius: 40px;
+}
+.carousel-control-prev-icon {
+    background-color: #100A30;
+    border: 5px solid #100A30;
+    border-radius: 40px;
+}
+
+.carousel-caption{
+    left: 10px;
+    right: 55%;
+    text-align: left;
+    color: #000000;
+    font-weight: bold;
+
+}
+
+.w-100 {
+    width: 1000px;
+    height: 700px;
+    padding: 5px;
+}
+
+
+h2{
+    line-height: 50px;
+    font-family: 'Sigmar One', cursive;
+}
+
+h3{
+    line-height: 100px;
+    font-family: 'Sigmar One', cursive;
+    color: #100A30
+}
+
+p{
+
+    text-align: justify;
+}
+
+
+
+

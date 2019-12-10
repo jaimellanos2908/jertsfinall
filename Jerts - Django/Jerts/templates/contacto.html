@@ -1,0 +1,133 @@
+  {% load static %}
+<!DOCTYPE html>
+<html lang="es-cl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jerts contactos</title>
+    <link rel="icon" type="image/png" href="Contacto/img_contacto/logo_jerts_contacto.jpg">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/flexboxgrid.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css">
+
+    <link rel="stylesheet" href="{% static 'Contacto/css/contacto.css' %}">
+    
+</head>
+<body>
+      {% include 'menu.html' %}
+
+    <div class="container contact-form">
+        <div class="contact-image">
+            <img src="{% static 'Contacto/img_contacto/logo_jerts_contacto.jpg' %}" alt="logo_jerts"/>
+        </div>
+        <form action="{% url 'contacto' %}" method="POST" >
+               
+          {% csrf_token %}
+          <!--onsubmit="validar(); return false;-->
+            <h3>Escribe un Comentario</h3>
+           <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        {{ form.Nombre.label_tag }}
+                        {{ form.Nombre }}
+                    </div>
+                   <div class="form-group">
+                    {{ form.Email.label_tag }}
+                                {{ form.Email }}
+                    </div>
+                    <div class="form-group">
+                      {{ form.Telefono.label_tag }}
+                                {{ form.Telefono }}
+                    </div>
+                    <div class="form-group">
+                        
+                        <button type="submit" class="btnContact">Enviar</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                      {{ form.Descripcion.label_tag }}
+                              {{ form.Descripcion }}
+                    </div>
+                </div>
+            </div>
+        </form>
+</div>
+
+
+
+
+    <!--JS FILES-->
+
+    <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src=" {% static 'js/jquery.validate.js' %}"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+
+   <script>
+          function validar(){
+              console.log("hola");
+             
+              nombre = document.getElementById('nombre').value;
+           
+              correo = document.getElementById('email').value;
+            
+              numero = document.getElementById('numero').value;
+              
+              mensaje = document.getElementById('mensaje').value;
+
+              
+              console.log(nombre);
+              console.log(correo);
+              console.log(numero);
+              console.log(mensaje);
+
+             
+             
+            
+              
+              
+              if (!validar_email(correo) || nombre.trim().length==0 ||  mensaje.trim().length==0 ){
+                    //console.log("ERROR");
+                    error();
+                    return false;
+              }else{
+                    exito();
+                    return false;
+              }
+              
+                  
+              }
+
+             
+
+              function error(){
+                  Swal.fire({
+                  type: 'error',
+                  title: 'Error',
+                  text: 'Datos incorrectos o incompletos, Intente nuevamente',
+              
+              })
+              }
+
+              function exito(){
+                Swal.fire(
+                'Exito',
+                'success'
+                );
+
+             }
+             function validar_email( email ) 
+        {
+            var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email) ? true : false;
+        }
+    </script>
+</body>
+</html>

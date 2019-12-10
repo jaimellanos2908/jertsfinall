@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es-cl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jerts</title>
+    <link rel="icon" type="Inicio/img_inicio/jpg" href="{% static 'Inicio/img_inicio/logo_jerts.jpeg' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/flexboxgrid.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.css ">
+    <link rel="stylesheet" href=" {% static 'Inicio/css/style_index.css' %}">
+</head>
+
+<body>
+        {% include 'menu.html' %}
+    
+
+    
+        {% block content %}
+        
+        {% endblock %}
+
+
+
+<div class="footer">
+    <div class="bg-jerts-white-10" data-reactid="195"><hr data-reactid="196">
+        <div data-reactid="197">
+            <div class="layout" style="padding:0 32px 80px 32px;" data-reactid="198">
+                <div class="layout__item one-half portable-one-whole" data-reactid="199">
+                  <p data-reactid="200">© 2019 Jerts Inc.</p>
+                </div>
+                <div class="layout__item one-half portable-one-whole" data-reactid="201">
+                  <table style="width:100%;" data-reactid="202">
+                    <tbody style="border-collapse:collapse;border:0;" data-reactid="203">
+                        <tr style="border-collapse:collapse;border:0;" data-reactid="204">
+                            <td style="display:table-cell;padding:0px;margin:0;background:inherit;padding-right:15px;width:25%;" data-reactid="205"><a href="#" data-reactid="206">Privacidad</a>
+                            </td>
+                            <td style="display:table-cell;padding:0px;margin:0;background:inherit;padding-right:15px;width:25%;" data-reactid="207"><a href="#" data-reactid="208">Términos</a>
+                            </td>
+                            <td style="display:table-cell;padding:0px;margin:0;background:inherit;padding-right:15px;width:50%;" class="hidden--desk-and-up" data-reactid="209">&nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        
+   
+
+</body>
+<!--JS FILES-->
+<script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+<script src=" {% static 'js/jquery.validate.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+
+</html>

@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Registro</title>
+        <link rel="icon" type="inicio_sesion/img_Inicio_sesion/jpg" href="{% static 'inicio_sesion/img_Inicio_sesion/logo_jerts.jpg' %}">
+       
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href=" {% static 'css/flexboxgrid.css' %}">
+        <link rel="stylesheet" href="{% static 'Registro/css/Registro.css' %}">
+    </head>
+<body >
+  
+    {% include 'menu.html' %}
+    <div>
+    
+          <div class= "login-box " >
+
+                  <img src="{% static 'Registro/img_Registro/logo_jerts.jpg' %}" class="avatar" alt="Avatar Image">
+          
+                <h1></h1>
+          
+               <!-- <form onsubmit="validar(); return false;">-->
+              
+                  <!-- USERNAME INPUT -->
+          
+                    <form method="POST">
+                    {% csrf_token %}
+                     
+
+                    {% for field in form %}
+                      <div class="form-group">
+                        {{ field.label_tag}}
+                        {{ field}}
+                        {%  if field.errors %}
+                          {{ field.errors }}
+                        {% endif%}
+                      </div>
+                    {% endfor %} 
+                    <button  type="submit" class="btn btn-primary" >Registrar </button>
+                  </form>
+
+          
+              </div>
+              </div>
+            </div>
+
+            <script src="{% static 'js/jquery-3.4.1.js' %}"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+            <script src=" {% static 'js/jquery.validate.js' %}"></script>  
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="{% static 'js/bootstrap.js' %}"></script>
+            <!-- Recuerden buscar la información -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+               
+            <script src="{% static 'js/app.js' %}"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+
+            <script>
+                function validar(){
+
+                  nombre = document.getElementById('nombre').value;
+                  apellido = document.getElementById('apellido').value;
+                  correo = document.getElementById('correo').value;
+                  password = document.getElementById('passwrord').value;
+                  console.log(nombre.trim().length);
+                  console.log(apellido.trim().length);
+                  console.log(password.trim().length);
+                      
+                  
+                  if (!validar_email(correo) || nombre.trim().length==0 || apellido.trim().length==0 || password.trim().length==0 ){
+                        console.log("ERROR");
+                        error();
+                  }else{
+
+                      exito();
+                  }
+                      
+                      
+                  }
+
+                  function error(){
+                      Swal.fire({
+                      type: 'error',
+                      title: 'Error',
+                      text: 'Datos incorrectos o incompletos, Intente nuevamente',
+                  
+                  })
+                  }
+
+                  function exito(){
+                    Swal.fire(
+                'Exito',
+                'success'
+                ).then((result) => {
+                    window.location.href='file:///Users/alexismoya/Downloads/Jerts/index.html';
+                })
+    
+                 }
+
+                  function validar_email( email ) 
+                  {
+                      var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                      return regex.test(email) ? true : false;
+                  }
+            </script>
+</body>
+</html>

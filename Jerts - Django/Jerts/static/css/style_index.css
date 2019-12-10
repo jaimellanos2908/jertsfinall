@@ -1,0 +1,228 @@
+.none
+{
+    text-decoration: none;
+    color: aliceblue;
+    text-align: right;
+    margin-left: 5%;
+}
+
+
+
+body{
+    background-size: 100%;
+}
+
+
+.columna
+{
+    width: 100%;
+    margin:auto;
+}
+img{
+    width: 100%;
+}
+div#general{
+   
+    background: #0B0301;
+
+}
+div#general img  {
+
+    padding: 0px;
+    width: 100px;
+    top: 100px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 100%;
+    background: #0B0301   
+
+}
+div#general h5 {
+    margin-left: 400px;
+    background: #0B0301;
+ 
+}
+h2 {
+    margin-left: 600px;
+}
+img{
+    padding: 0px;
+}
+button{
+    padding:20px;
+    color: black;
+    border-radius : 10px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0px
+}
+.main{
+    background-color:rgb(28, 14, 68);
+}
+
+.header{
+    background-color:rgb(28, 14, 68);
+}
+
+.img-fluid{
+    max-width: 100%;
+    height: auto;
+    height: 100%;
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+nav ul li a{
+    text-decoration: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    color: #ffffff;
+}
+
+#logo{
+    padding: 2px;
+    width: 100px;
+    margin-right: 160px;
+    margin-top:100px;
+
+
+  
+}
+
+#auto{
+    padding-bottom: 0%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    
+}
+.redes-sociales{
+    color: #141313;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+.redes-sociales:hover{
+    color: crimson;
+}
+
+.texto-blanco{
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 100px;
+    padding: 10%;
+}
+.texto-centrar{
+    text-align: center;
+}
+
+footer{
+    padding: 25px;
+    background-color: lightgray;
+}
+
+button{
+    display: inline-block;
+
+    background-color:#0e0a09;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button:hover span {
+    padding-right: 25px;
+}
+      
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+h4{
+    margin-bottom: 600px;
+    color: #0e0a09;
+    font: small-caps 100%/200% serif;
+}
+
+.linea{
+    text-decoration: none;
+    margin-top: 100px;
+    margin-right: 30px;
+}
+
+.of{
+    color: blanchedalmond;
+    margin-left: 100px;
+    padding: 10% 20% 10% 20%;
+    text-align: top;
+}
+
+
+.lol{
+
+    margin-left: 36%;
+}
+
+.container{
+    background: #FFFFFF;
+      
+}
+   
+.app{
+      
+    margin-block: 10px;
+
+}
+
+.bt{
+    margin-left: 175px;
+    bottom: 10px;
+    margin-top: 70px;
+}
+
+.btn{
+    margin-left: 175px;
+    padding: 0px;
+}
+
+.tamaño{
+    height: 500px;
+}
+    
+.celular
+{
+    height:500px;
+    width: 420px;
+}
+
+.visitanos{
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.visit{
+    text-align: center;
+    text-indent: 5px;
+    text-align: start;
+    text-align: left;
+    margin-left: 38px;
+ }  
